@@ -1,3 +1,17 @@
-<h1>
-  {{title}}
-</h1>
+<header id="header">
+	<img src="./assets/images/task-clipart-list.png" id="logo">
+	<h1> {{titulo}} </h1>
+	<div class="clearfitx"> </div>
+</header>
+<nav id="nav">
+	<ul>
+		<li><a [routerLink]="['/taskAdd']" [routerLinkActive]="['Activado']">Task Add</a></li>
+		<li><a [routerLink]="['taskList']" [routerLinkActive]="['Activado']">Task List</a>
+		<li><a [routerLink]="['contact']" [routerLinkActive]="['Activado']">Contact</a>
+	</ul>
+</nav>  
+
+<section class="main">
+	<router-outlet></router-outlet>
+	<div class="clearfitx"> </div>
+</section>

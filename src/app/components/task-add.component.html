@@ -1,0 +1,25 @@
+<h4>{{titulo}}</h4>
+
+<form #formTask="ngForm" (ngSubmit)="onSubmit()" class="col-lg-6" id="form-task">
+
+<label>Name:</label>
+<input type="text" #name="ngModel" name='name' [(ngModel)]="task.name" class="form-control" required/>
+<span *ngIf="!name.valid">Name is required</span>
+<label>Description:</label>
+<p>
+	<textarea #description="ngModel" [(ngModel)]="task.description" name='description' class="form-control" required></textarea>
+	<span *ngIf="!description.valid">Description is required</span>
+</p>
+<label>Date:</label>
+<p>
+	<input type = "date" #dateTask="ngModel" [(ngModel)]="task.dateTask" name='dateTask'  class="form-control" required class="col-lg-4" />
+	<span *ngIf="!dateTask.valid">Date is required</span>
+</p>
+<label>Priority (1:Emergency 2: Critical 3 High 4: Medium 5: Low) :</label>
+<p>
+	<input type="number" #priority="ngModel" [(ngModel)]="task.priority" name='priority' class="form-control" size="1" maxlength="1" min="1" max="5" required />
+	<span *ngIf="!priority.valid">Priority is required</span>	
+</p>
+
+<input type="submit" value="{{titulo}}" [disabled]="!formTask.form.valid" class="btn btn-success"/>
+</form>

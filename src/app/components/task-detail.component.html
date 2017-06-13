@@ -1,0 +1,12 @@
+<h4>{{titulo}}</h4>
+<br/>
+<div *ngIf="task" class="task-box">
+	<div class="data-task">
+		<h3>Task: {{task.name}}</h3>
+		<h3 class="priority">Priority: {{task.priority}}</h3>
+		<p class="description">Description: {{task.description}}</p>
+		<p class="date">Date: {{task.dateTask}}</p>
+		<p class="dateAd">Created: {{task.createdAt}}</p>
+		<p class="dateUp">Last Update: {{task.updatedAt}}
+	</div>
+</div>
