@@ -11,7 +11,7 @@ import { TaskModelInsert } from '../model/task-model-insert';
 @Injectable()
 
 export class TaskService {
-  public tasksUrl = 'http://localhost/index.php';  
+  public tasksUrl = 'http://ec2-13-58-182-27.us-east-2.compute.amazonaws.com/index.php';  
   constructor (private _http: Http) {
   }
   
